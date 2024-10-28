@@ -1,0 +1,100 @@
+/* components/InmuebleForm.module.scss */
+
+$form-background: #e0f2f1;
+$form-color: #333;
+$input-background: #ffffff;
+$button-background: #81c784;
+$button-hover: #66bb6a;
+$text-muted: #888;
+
+.formContainer {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: $form-background;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: $form-color;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 1.5rem;
+  width: 100%; /* Cada campo ocupa el ancho completo */
+}
+
+.input, .select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: $input-background;
+  color: #333;
+  width: 100%; /* Hace que el input ocupe todo el ancho del contenedor */
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* Permite que los checkboxes pasen a la siguiente línea si es necesario */
+
+  .checkboxLabel {
+    font-weight: normal;
+  }
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: $button-background;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.text-muted {
+  font-size: 0.8rem;
+  color: $text-muted;
+  margin-top: 1rem;
+
+  a {
+    color: $button-background;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
